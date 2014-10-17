@@ -1,0 +1,37 @@
+.row(ng-controller="ordinary.artwork.detail")
+    .col-lg-10
+        .artwork
+            .cover(ng-show='artwork.file.url')
+                section.video(ng-video)
+                    video(vi-screen,width="100%")
+
+                    .row.text-center(vi-feedback,style="margin:0")
+                        span Time: {{currentTime}}s / {{duration}}
+
+                        .col-sm-10.col-sm-offset-1
+                            .progress(style="height:4px")
+                                .progress-bar.progress-bar-info(role="progressbar",aria-valuenow="60",aria-valuemin="0",aria-valuemax="100",style="width: {{currentTime/duration*100}}%;transition:none")
+                                    span.sr-only {{currentTime/duration*100}}%
+                        .col-sm-12(vi-controls)
+                            a(vi-controls-play,ng-show="!playing")
+                                i.fa.fa-play.fa-2
+                            a(vi-controls-pause,ng-show="playing")
+                                i.fa.fa-pause.fa-2
+                            //span Buffered: {{buffered}}%
+
+            .text
+                .title {{artwork.title}}
+                .tags
+                    span.label.label-info(ng-repeat="tag in artwork.tag") {{tag.name}}
+                .description {{artwork.content}}
+                .meta
+                    a(ng-click="like(artwork.id)")
+                        i.fa.fa-heart
+                        | {{artwork.like||0}}
+    .col-lg-2
+        div
+            | online:1110
+            | last update : 9:00
+
+
+

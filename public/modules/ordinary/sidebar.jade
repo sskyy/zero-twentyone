@@ -1,0 +1,54 @@
+aside.left-side.sidebar-offcanvas
+    // sidebar: style can be found in sidebar.less
+    section.sidebar
+        // Sidebar user panel
+        //.user-panel
+            .pull-left.image
+                img.img-circle(src='../../images/avatar3.png', alt='User Image')
+            .pull-left.info
+                p Hello, Jane
+                a(href='#')
+                    i.fa.fa-circle.text-success
+                    |  Online
+        // search form
+        form.sidebar-form(action='#', method='get')
+            .input-group
+                input.form-control(type='text', name='q', placeholder='Search...')
+                span.input-group-btn
+                    button#search-btn.btn.btn-flat(type='submit', name='seach')
+                        i.fa.fa-search
+        // /.search form
+        // sidebar menu: : style can be found in sidebar.less
+        ul.sidebar-menu
+            li.treeview.active
+                a(ui-sref="artwork")
+                    i.fa.fa-picture-o
+                    span Artworks
+                ul.treeview-menu
+                    li.active
+                        a(ui-sref="artworkBoard")
+                            span hottest
+                            i.fa.fa-angle-right.pull-right
+                    li
+                        a(ui-sref='artwork')
+                            span latest
+                            i.fa.fa-angle-right.pull-right
+            li.treeview.active
+                a(ui-sref="artist")
+                    i.fa.fa-group
+                    span Artists
+                ul.treeview-menu
+                    li
+                        a(ui-sref="artist")
+                            span latest
+                            i.fa.fa-angle-right.pull-right
+                    li
+                        a(ui-sref="artistBoard")
+                            span famous
+                            i.fa.fa-angle-right.pull-right
+                    li
+                        a(ui-sref="me")
+                            span me
+                            i.fa.fa-angle-right.pull-right
+
+    // /.sidebar

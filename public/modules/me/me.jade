@@ -1,0 +1,32 @@
+div(ng-controller="me")
+    .row
+        .col-lg-2
+            div(ng-show="!me.avatar")
+                div(avatar-upload='{"attach":"me.avatar"}' )
+                    |上传头像
+                a(ng-click="startUpload()") 开始上传
+            img(ng-src="{{me.avatar}}")
+        .col-lg-10
+            h2 {{me.name}}
+            div
+                div(ng-show="editing!='signature'")
+                    span {{me.signature}}
+                    a(ng-click="editing='signature'",ng-show="editing!='signature'")
+                        span.fa.fa-pencil
+                div(ng-show="editing=='signature'")
+                    input(ng-model='me.signature')
+                    a(ng-click="update(me);editing=false").btn.btn-primary 确定
+
+
+    .row
+        .col-lg-12(ng-controller="node.crud",crud-config='{"type":"artwork"}',crud-params='{"limit":"2","uid":$parent.user.id}')
+            .row(ng-init="crud.query()")
+                .col-xs-4(ng-repeat="artwork in crud.data.records")
+                    include ../artwork/artwork.brief.jade
+            .row
+                .col-xs-12
+                    ul.pagination
+                        li(ng-repeat="page in crud.pagination.display")
+                            a(ng-click="crud.goto(page)",ng-class="{active:page==crud.pagination.index}") {{page+1}}
+
+

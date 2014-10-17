@@ -1,0 +1,19 @@
+div(ng-controller="ordianry.artist.detail")
+    .row
+        .col-lg-2
+            img(ng-src="{{artist.avatar||'https://d13yacurqjgara.cloudfront.net/users/11591/screenshots/1761109/made_in_the_usa.png'}}")
+        .col-lg-10
+            h2 {{artist.name||'Jiamiu.hzy'}}
+            p {{artist.signature||"What hurts more, the pain of hard work or the pain of regret?"}}
+    .row
+        .col-lg-12(ng-controller="node.crud",crud-config='{"type":"artwork"}',crud-params='{"limit":"2","uid":$parent.artist.id}')
+            .row(ng-init="crud.query()")
+                .col-xs-4(ng-repeat="artwork in crud.data.records")
+                    include ../artwork/artwork.brief.jade
+            .row
+                .col-xs-12
+                    ul.pagination
+                        li(ng-repeat="page in crud.pagination.display")
+                            a(ng-click="crud.goto(page)",ng-class="{active:page==crud.pagination.index}") {{page+1}}
+
+

@@ -1,0 +1,49 @@
+html
+    head
+        meta(charset='UTF-8')
+        title Twentyone | Registration
+        include head.jade
+        script(src="./js/user/login.js")
+    body
+        .container.skin-black(ng-app="register")
+            .row
+                .header.row
+                    h2.col-xs-12.text-center.text-white Twentyone
+            .row
+                .transparent.col-xs-6.col-xs-offset-3(ng-controller="register")
+                    form
+                        p.text-white 已有邀请码? 直接注册!
+                        div
+                            .form-group
+                                input.form-control(type='text', name='name', placeholder='Full name',ng-model='user.name')
+                            .form-group
+                                input.form-control(type='text', name='email', placeholder='Email',ng-model='user.email')
+                            .form-group
+                                input.form-control(type='password', name='password', placeholder='Password',ng-model='user.password')
+                            .form-group
+                                input.form-control(type='text', name='inviteCode', placeholder='Password',ng-model='user.inviteCode')
+                            .form-group
+                                button.btn.btn-primary(type='submit',ng-click='register()') Sign up
+                                label.control-label
+                                a.text-white(ng-click="asking=true") 没有邀请码? 组织给你!
+                        div(ng-init="asking=true",ng-show="asking")
+                            p 目前只能用公司邮箱注册
+                            .form-group.text-white
+                                label.radio-inline
+                                    input(type='radio', name='org',ng-model='org',value="@alibaba-inc.com")
+                                    | Alibaba
+                                label.radio-inline
+                                    input(type='radio', name='org',ng-model='org',value="@sina.com")
+                                    | Sina
+                                label.radio-inline
+                                    input(type='radio', name='org',ng-model='org',value="@hotmail.com")
+                                    | Microsoft
+                            .form-group
+                                .input-group
+                                    .row
+                                        .col-sm-6
+                                            input.form-control(type='text', name='prefix', placeholder='email prefix',ng-model='prefix')
+                                        .col-sm-6
+                                            input.form-control(type='text',ng-model='org',disabled)
+                            div
+                                a.btn.btn-primary(ng-click="getInviteCode(prefix+'@'+org)" ng-class="{disabled:!org||!prefix}") Get it

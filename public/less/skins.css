@@ -1,0 +1,127 @@
+/*
+    Skins
+    -----
+*/
+/* skin-black navbar */
+.skin-black {
+  /* skin-black content header */
+  /* Skin-red user panel */
+}
+.skin-black .right-side > .content-header {
+  background: transparent;
+  box-shadow: none;
+}
+.skin-black .user-panel > .image > img {
+  border: 1px solid #444;
+}
+.skin-black .user-panel > .info,
+.skin-black .user-panel > .info > a {
+  color: #eee;
+}
+.skin-black .form-control {
+  background-color: #404040;
+  border: 1px #333333 solid;
+  color: #ffffff;
+}
+html,
+body {
+  background: #d5dee7;
+}
+/* skin twentyone*/
+.skin-twentyone .navbar {
+  border-bottom: 1px solid #fff;
+}
+.skin-twentyone .logo {
+  color: #be7465;
+}
+.skin-twentyone .left-side {
+  width: 180px;
+  background: #344563;
+}
+.skin-twentyone .user-panel > .image > img {
+  border: 1px solid #444;
+}
+.skin-twentyone .user-panel > .info,
+.skin-twentyone .user-panel > .info > a {
+  color: #eee;
+}
+.skin-twentyone .sidebar a {
+  color: #ccc;
+}
+.skin-twentyone .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-twentyone .sidebar a i.pull-right {
+  color: #263753;
+}
+.skin-twentyone .sidebar .sidebar-menu > li {
+  border-top: 1px solid #304e5d;
+  border-bottom: 0px solid #2f405c;
+}
+.skin-twentyone .sidebar .sidebar-menu > li:first-of-type {
+  border-top: none;
+}
+.skin-twentyone .sidebar .sidebar-menu > li:first-of-type > a {
+  border-top: none;
+}
+.skin-twentyone .sidebar .sidebar-menu > li:last-of-type {
+  border-bottom: none;
+}
+.skin-twentyone .sidebar .sidebar-menu > li:last-of-type > a {
+  border-bottom: none;
+}
+.skin-twentyone .sidebar .sidebar-menu > li > a {
+  margin-right: 1px;
+}
+.skin-twentyone .sidebar .sidebar-menu > li > a:hover,
+.skin-twentyone .sidebar .sidebar-menu > li.active > a {
+  color: #fff;
+}
+.skin-twentyone .sidebar .sidebar-menu > li > .treeview-menu {
+  margin: 0 1px;
+}
+.skin-twentyone .sidebar .sidebar-menu > li > .treeview-menu > li > a {
+  color: #ccc;
+}
+.skin-twentyone .sidebar .sidebar-menu > li > .treeview-menu > li.active > a,
+.skin-twentyone .sidebar .sidebar-menu > li > .treeview-menu > li > a:hover {
+  color: #4eab70;
+}
+.skin-twentyone .sidebar-form {
+  border: 0px solid #555;
+  margin: 10px 10px;
+}
+.skin-twentyone .sidebar-form input[type="text"],
+.skin-twentyone .sidebar-form .btn {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0 solid rgba(255, 255, 255, 0.1);
+  height: 35px;
+  outline: none;
+}
+.skin-twentyone .sidebar-form input[type="text"] {
+  color: #666;
+}
+.skin-twentyone .sidebar-form input[type="text"]:focus,
+.skin-twentyone .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #444;
+  border: 0;
+}
+.skin-twentyone .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left: 0;
+}
+.skin-twentyone .sidebar-form .btn {
+  color: #999;
+  border-left: 0;
+}
+.skin-twentyone .right-side {
+  margin-left: 180px;
+  position: relative;
+  background: #d5dee7;
+}
+.skin-twentyone .right-side .wing .chat-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "twentyone",
+  "version": "0.0.1",
+  "description" : "zero module",
+  "zero" : {
+    "dependencies" : {
+      "author" : "zero-author^0.0.1",
+      "board" : "zero-board^0.0.1",
+      "chat" : "zero-chat^0.0.1",
+      "file" : "zero-file^0.0.1",
+      "index" : "zero-index^0.0.1",
+      "invite" : "zero-invite^0.0.1",
+      "like" : "zero-like^0.0.1",
+      "mail" : "zero-mail^0.0.1",
+      "node" : "zero-node^0.0.1",
+      "qiniu" : "zero-qiniu^0.0.1",
+      "rbac" : "zero-rbac^0.0.1",
+      "storage" : "zero-storage^0.0.1",
+      "theme" : "zero-theme^0.0.1"
+    }
+  },
+  "author" : "jiamiu"
+}

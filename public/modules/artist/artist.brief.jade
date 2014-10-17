@@ -1,0 +1,12 @@
+.artwork.brief
+    .cover
+        a(href="#/artist/{{artist.id}}")
+            img(ng-src="{{artist.avatar}}")
+        a.mask(href="#/artist/{{artist.id}}")
+    .text
+        .title {{artist.name}}
+        .description {{artist.description}}
+        .meta
+            a
+                i.fa.fa-heart
+                | {{artwork.like||0}}

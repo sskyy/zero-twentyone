@@ -1,0 +1,14 @@
+.row(ng-controller="ordinary.artwork")
+    .col-lg-10(ng-controller="node.crud",crud-config='{"type":"artwork"}',crud-params='{"limit":"2"}')
+        .row(ng-init="crud.query()")
+            .col-xs-4(ng-repeat="artwork in crud.data.records")
+                include artwork.brief.jade
+        .row
+            .col-xs-12
+                ul.pagination
+                    li(ng-repeat="page in crud.pagination.display")
+                        a(ng-click="crud.goto(page)",ng-class="{active:page==crud.pagination.index}") {{page+1}}
+    .col-lg-2
+        div
+            | online:1110
+            | last update : 9:00

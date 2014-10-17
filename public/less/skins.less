@@ -1,0 +1,146 @@
+
+
+/* skin-black navbar */
+.skin-black {
+    /* skin-black content header */
+    .right-side > .content-header {
+        background: transparent;
+        box-shadow: none;
+    }
+    /* Skin-red user panel */
+    .user-panel {
+        > .info, > .info > a {
+            color: #eee;
+        }
+    }
+    .form-control{
+        background-color: #404040;
+        border:1px #333333 solid;
+        color :#fff
+    }
+    .btn{
+        color :#333;
+    }
+}
+html, body {
+    background: #d5dee7;
+}
+
+/* skin twentyone*/
+.skin-twentyone {
+    .navbar {
+        border-bottom: 1px solid #fff;
+    }
+    .logo {
+        color: #be7465;
+        //        .logo-variant(#be7465);
+    }
+
+    // Sidebar color
+    .left-side {
+        width: 180px;
+        background: #344563;
+    }
+
+    .user-panel {
+        > .image > img {
+            border: 1px solid #444;
+        }
+
+        > .info, > .info > a {
+            color: #eee;
+        }
+    }
+
+    .sidebar {
+        a {
+            color: #ccc;
+            &:hover {
+                text-decoration: none;
+            }
+            i.pull-right {
+                color: #263753;
+
+            }
+        }
+        .sidebar-menu > li {
+            border-top: 1px solid #304e5d;
+            border-bottom: 0px solid #2f405c;
+
+            &:first-of-type {
+                border-top: none;
+                > a {
+                    border-top: none;
+                }
+            }
+            &:last-of-type {
+                border-bottom: none;
+                > a {
+                    border-bottom: none;
+                }
+            }
+            > a {
+                margin-right: 1px;
+            }
+            //Hover and active states
+            > a:hover, &.active > a {
+                color: #fff;
+
+            }
+            > .treeview-menu {
+                margin: 0 1px;
+                & > li {
+                    > a {
+                        color: #ccc;
+                    }
+                    &.active > a, > a:hover {
+                        color: #4eab70;
+                    }
+                }
+            }
+        }
+    }
+
+    .sidebar-form {
+        border: 0px solid #555;
+        margin: 10px 10px;
+        input[type="text"], .btn {
+            box-shadow: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 0 solid rgba(255, 255, 255, 0.1);
+            height: 35px;
+            outline: none;
+        }
+        input[type="text"] {
+            color: #666;
+            &:focus, &:focus + .input-group-btn .btn {
+                background-color: #444;
+                border: 0;
+            }
+            &:focus + .input-group-btn .btn {
+                border-left: 0;
+            }
+        }
+        .btn {
+            color: #999;
+            border-left: 0;
+        }
+    }
+
+    .right-side {
+        margin-left: 180px;
+        position: relative;
+        background: #d5dee7;
+
+        .wing {
+            .chat-input {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: 10px;
+            }
+        }
+    }
+
+}
+
