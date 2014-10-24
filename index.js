@@ -42,6 +42,7 @@ var twentyOne = {
   theme : {
     directory : './public'
   },
+
   bootstrap : function(){
     var root = this
     return  setTimeout(function() {
